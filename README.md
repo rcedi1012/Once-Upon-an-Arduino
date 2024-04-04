@@ -1,2 +1,2 @@
 # Once-Upon-an-Arduino
-Arduino Godzilla project
+Arduino Godzilla Project
