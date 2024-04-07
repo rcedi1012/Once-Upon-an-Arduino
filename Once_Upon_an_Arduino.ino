@@ -1,5 +1,17 @@
+#include <Servo.h>
+
+Servo servo1;
+Servo servo2;
+Servo servo3;
+
+const int swtichPin = 11;
+int buttonVal;
+
+
 void setup() {
-  // put your setup code here, to run once:
+  servo1.attach(8);
+  servo2.attach(9);
+  servo3.attach(10);
 
 }
 
