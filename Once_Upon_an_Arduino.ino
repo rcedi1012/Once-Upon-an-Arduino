@@ -13,24 +13,30 @@ void setup() {
   servo2.attach(9);
   servo3.attach(10);
 
+  //Servo Reset
+
+  servo1.write(0);
+  servo2.write(0);
+  servo3.write(0);
+
 }
 
 void loop() {
  
-//Baby Godzilla swim to right and can flip up
+//Baby Godzilla swim to right and can rotate to pour waste on godzilla (servo for can (45) and slide switch)
 
 
-//Godzilla evolving
-
-
-
-//Godzilla rising
-
-
-//Godzilla breaking through the bridge
+//Godzilla evolving (switch and servo 180)
 
 
 
-//Godzilla atomic breath
+//Godzilla rising (Manual)
+
+
+//Godzilla breaking through the bridge (servo for tail swish (180))
+
+
+
+//Godzilla atomic breath (leds)
 
 }
