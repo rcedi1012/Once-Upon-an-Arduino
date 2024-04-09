@@ -23,20 +23,20 @@ void setup() {
 
 void loop() {
  
-//Baby Godzilla swim to right and can rotate to pour waste on godzilla (servo for can (45) and slide switch)
+// Baby Godzilla swim to right (manual) and toxic waste can rotate to pour waste on godzilla (servo for can (45) and slide switch)
 
 
-//Godzilla evolving (switch and servo 180)
-
-
-
-//Godzilla rising (Manual)
-
-
-//Godzilla breaking through the bridge (servo for tail swish (180))
+// Godzilla evolving (switch and servo 180)
 
 
 
-//Godzilla atomic breath (leds)
+// Godzilla rising (Manual)
+
+
+// Godzilla breaking through the bridge (servo for tail swish (180))
+
+
+
+// Godzilla atomic breath (leds)
 
 }
