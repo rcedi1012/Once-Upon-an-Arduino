@@ -23,7 +23,7 @@ void setup() {
 
   //Servo Reset
 
-  servo1.write(0);
+  servo1.write(90);
   servo2.write(0);
   servo3.write(0);
 
@@ -37,21 +37,21 @@ void loop() {
 
   if (switchState != previousSwitchState) {
     if (switchState == HIGH) {
-       servo1.write(45);
+       servo1.write(180);
     }
   }
-  previousSwitchState = switchState
+  previousSwitchState = switchState;
 
 // Godzilla evolving (button and servo 180)
 
  buttonState = digitalRead(buttonPin);
 
-  if (buttonState != previousbuttonState) {
+  if (buttonState != previousButtonState) {
     if (buttonState == HIGH) {
        servo2.write(180);
     }
   }
-  previousButtonState = buttonState
+  previousButtonState = buttonState;
 
 
 // Godzilla rising (Manual)
