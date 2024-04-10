@@ -4,14 +4,22 @@ Servo servo1;
 Servo servo2;
 Servo servo3;
 
-const int swtichPin = 11;
-int buttonVal;
+const int switchPin = 11;
+int switchState = 0;
+int previousSwitchState = 0;
+
+const int buttonPin = 12;
+int buttonState = 0;
+int previousButtonState = 0;
 
 
 void setup() {
   servo1.attach(8);
   servo2.attach(9);
   servo3.attach(10);
+
+  pinMode(switchPin, INPUT);
+  pinMode(buttonPin, INPUT);
 
   //Servo Reset
 
@@ -25,9 +33,25 @@ void loop() {
  
 // Baby Godzilla swim to right (manual) and toxic waste can rotate to pour waste on godzilla (servo for can (45) and slide switch)
 
+  switchState = digitalRead(switchPin);
 
-// Godzilla evolving (switch and servo 180)
+  if (switchState != previousSwitchState) {
+    if (switchState == HIGH) {
+       servo1.write(45);
+    }
+  }
+  previousSwitchState = switchState
 
+// Godzilla evolving (button and servo 180)
+
+ buttonState = digitalRead(buttonPin);
+
+  if (buttonState != previousbuttonState) {
+    if (buttonState == HIGH) {
+       servo1.write(180);
+    }
+  }
+  previousButtonState = buttonState
 
 
 // Godzilla rising (Manual)
