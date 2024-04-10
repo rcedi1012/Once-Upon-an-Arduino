@@ -48,7 +48,7 @@ void loop() {
 
   if (buttonState != previousbuttonState) {
     if (buttonState == HIGH) {
-       servo1.write(180);
+       servo2.write(180);
     }
   }
   previousButtonState = buttonState
