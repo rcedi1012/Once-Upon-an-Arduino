@@ -12,6 +12,18 @@ const int buttonPin = 12;
 int buttonState = 0;
 int previousButtonState = 0;
 
+const int slidePin = 13;
+int slideState = 0;
+int previousSlideState = 0;
+
+const int spikePin = 13;
+int spikeState = 0;
+int previousSpikeState = 0;
+
+const int led1 = 6;
+const int led2 = 5;
+const int led3 = 4;
+
 
 void setup() {
   servo1.attach(8);
@@ -20,6 +32,11 @@ void setup() {
 
   pinMode(switchPin, INPUT);
   pinMode(buttonPin, INPUT);
+  pinMode(slidePin, INPUT);
+
+  pinMode(led1, OUTPUT);
+  pinMode(led2, OUTPUT);
+  pinMode(led3, OUTPUT);
 
   //Servo Reset
 
@@ -59,9 +76,27 @@ void loop() {
 
 
 // Godzilla breaking through the bridge (servo for tail swish (180))
+  
+  slideState = digitalRead(slidePin);
 
-
+  if (slideState != previousSlideState) {
+    if (slideState == HIGH) {
+       servo3.write(180);
+    }
+  }
+  previousSlideState = slideState;
 
 // Godzilla atomic breath (leds)
+
+  spikeState = digitalRead(spikePin);
+
+  if (spikeState != previousSpikeState) { //will change when i figure out how to make each one light up independently without delay
+    if (spikeState == HIGH) {
+      digitalWrite(led1, HIGH);
+      digitalWrite(led2, HIGH);
+      digitalWrite(led3, HIGH);
+    }
+  }
+  previousSlideState = slideState;
 
 }
