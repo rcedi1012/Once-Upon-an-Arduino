@@ -100,3 +100,4 @@ void loop() {
   previousSlideState = slideState;
 
 }
+//finished code 4/15/2024
