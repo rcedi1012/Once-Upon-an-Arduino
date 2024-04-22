@@ -86,7 +86,7 @@ void loop() {
   }
   previousSlideState = slideState;
 
-// Godzilla atomic breath (leds)
+// Godzilla atomic breath (leds) lights up mouth
 
   spikeState = digitalRead(spikePin);
 
